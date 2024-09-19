@@ -10,12 +10,14 @@ public class _01_Factorial {
      */
     public static int factorial(int n) {
         // 1. If n is zero
-        
+        int f = 1;
             // 2. return 1
-        
+        if(n == 0) {
+        	f = n*factorial(n-1);
+        }
         // 3. else return n * factorial(n-1)
 
-        return 0;
+        return f;
     }
 
     public static void main(String[] args) {
