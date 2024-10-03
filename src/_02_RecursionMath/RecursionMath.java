@@ -21,13 +21,26 @@ public class RecursionMath {
     //       you can't divide anymore
     public static int recursiveDivision(int number, int numberToDivideBy) {
     	int n =1;
+    	if(numberToDivideBy > number) {
+    		n = 0;
+    	}
+    	else {
+    		//6/2 = 6-2-2-2 = 3
+    		n = 1+recursiveDivision(number-numberToDivideBy, numberToDivideBy);
+    	}
     	
         return n;
     }
 
     // Try this one on your own!
     public static int recursivePower(int number, int power) {
-        
-        return 0;
+        int n = number;
+    	if(power  == 0) {
+        	return 1;
+        }
+        else {
+        	n *= recursivePower(number,power-1);
+        }
+        return n;
     }
 }

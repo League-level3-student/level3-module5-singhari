@@ -25,6 +25,7 @@ class RecursionMathTest {
     @Test 
     public void testPower() {
         // Add JUnit tests to test your method
-        fail("Write some tests!");
+       // fail("Write some tests!");
+        assertEquals(9, RecursionMath.recursivePower(3, 2));
     }
 }
